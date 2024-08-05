@@ -10,6 +10,9 @@ from tkinter import *
 
 
 
+#should probably put all of this into a class at some point....
+
+
 #Open Window for file select
 def open_file_path():
     try:
@@ -17,50 +20,36 @@ def open_file_path():
         display_file_contents(file_path)
     except Exception as e:
         print("Error has occured!: ", e)
-
-
-        
     
 def display_file_contents(file_path):
     try:
-        df = pd.read_csv(file_path)
-        print(df.head())
+        print("Opening File")
+        with open(file_path, 'r') as file:
+            file_content = file.read()
+            text_widget.delete('1.0', tk.END)
+            text_widget.insert(tk.END, file_content)
     except Exception as e:
         print("Uh oh... something happend: \n", e)
 
 
 
 
-#main funciton
-def main():
+#set up main window application
+root = tk.Tk()
+root.title("TEST")
 
-    #should probably put all of this into a class at some point....
+#open a file button
+open_button = tk.Button(root, text="Open File", command=open_file_path)
+open_button.pack(padx=20, pady=20)
 
+#Create a text widget
+text_widget = tk.Text(root, wrap="word", width=50, height=30)
+text_widget.pack(pady=10, padx=10)
 
-    #set up main window application
-    root = tk.Tk()
-    root.title("TEST")
-
- 
-    #open a file button
-    open_button = tk.Button(root, text="Open File", command=open_file_path)
-    open_button.pack(padx=20, pady=20)
-
-    selected_file_label = tk.Label(text="Select File")
-    #selected_file_label.pack()
+selected_file_label = tk.Label(text="Select File")
 
 
-
-
-  
-
-    root.mainloop()
-
-
-
-# run main function
-if __name__ == '__main__':
-    main()
+root.mainloop()
 
 
 
