@@ -71,7 +71,11 @@ def display_file_contents(file_path, extension):
             
 
         except Exception as e:
-            print("Uh oh... something happend: \n", e)
+            text_widget.delete('1.0', tk.END)
+            text_widget.insert(tk.END, "-" * 60 + '\n' )
+            text_widget.insert(tk.END, "Could not find Column in file with header name 'I.P'\nPlease ensure that your file has a header named 'I.P'\n")
+            text_widget.insert(tk.END, "-" * 60 + '\n' )
+            print(e)
    
     elif extension == '.xls':
         try:
@@ -82,6 +86,7 @@ def display_file_contents(file_path, extension):
             text_widget.insert(tk.END, df)
         except Exception as e:
             print("Uh oh... something happend: \n", e)
+            text_widget.insert(tk.END, "An Error has Occured: " + e)
     
     else:
             text_widget.delete('1.0', tk.END)
@@ -96,7 +101,7 @@ def display_file_contents(file_path, extension):
 
 #set up main window application
 root = tk.Tk()
-root.title("TEST")
+root.title("I.P Scanner")
 
 #open a file button
 open_button = tk.Button(root, text="Open File", command=open_file_path)
