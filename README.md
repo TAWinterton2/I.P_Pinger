@@ -1,7 +1,7 @@
 # I.P_Pinger
 Custom Python Program for Mt.Mckinley Bank to assit in automating I.T Inventory and audits of all computers and printers connected on our network.
 
-### Dependinces
+### Dependinces & Libaries Used
   - [Python](https://www.python.org/downloads/)
   - [Pandas](https://pandas.pydata.org/)
   - [Pathlib](https://docs.python.org/3/library/pathlib.html)
