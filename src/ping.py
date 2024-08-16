@@ -4,7 +4,7 @@ from subprocess import PIPE, Popen
 
 def ping(nodes, times_to_ping):
     for ip in nodes:
-        data = ""
+        data = "Results: \n"
         output = Popen(f"ping {ip} -n {times_to_ping}" , stdout=PIPE, encoding="utf-8")
         for line in output.stdout:
             print(data + "\n")

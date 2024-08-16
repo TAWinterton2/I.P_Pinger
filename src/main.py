@@ -6,7 +6,6 @@
 import pandas as pd 
 import tkinter as tk
 import pathlib
-import os
 from ping import ping
 
 
