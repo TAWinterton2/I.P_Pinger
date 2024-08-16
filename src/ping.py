@@ -3,20 +3,35 @@ from subprocess import PIPE, Popen
 
 
 def ping(nodes, times_to_ping):
+    good_pings = []
+    bad_pings = []
     for ip in nodes:
-        data = "Results: \n"
+        data = ""
         output = Popen(f"ping {ip} -n {times_to_ping}" , stdout=PIPE, encoding="utf-8")
+        
         for line in output.stdout:
-            print(data + "\n")
-            data += line
+            data = data + line
+            
             ping_test = findall("TTL", data)
 
         if ping_test:
-            print(f"{ip}: Sucessfully pinged!")
+            good_pings.append(ip)
         else:
-            print(f"{ip}: Failed to Pinged")
+            bad_pings.append(ip)
+        
+    print("Sucessful pings: \n")
+    for x in good_pings:
+        print(x)
 
-    return data
+    print('\n')
+
+    print("Failed pings: \n")
+    for x in bad_pings:
+        print(x)
+
+    print("done")
+    return good_pings, bad_pings
+
 
 
 

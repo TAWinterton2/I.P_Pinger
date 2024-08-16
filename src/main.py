@@ -22,7 +22,7 @@ def open_file_path():
 
     text_widget.delete('1.0', tk.END)
     text_widget.insert(tk.END, "-" * 60 + '\n' )
-    text_widget.insert(tk.END, "Starting Ping Run...\n")
+    text_widget.insert(tk.END, "Starting Ping Scan...\n")
     text_widget.insert(tk.END, "-" * 60 + '\n' )
 
     try:
@@ -51,16 +51,22 @@ def display_file_contents(file_path, extension):
             df.dropna(inplace=True)
             
             nodes = df["I.P"].to_list()
-            result = ping(nodes, 3)
 
-            
+            #Start Pinging
+            good_ping, bad_ping = ping(nodes, 3)
 
-
-            #populate Text Box
+        
+            #Display Results
             text_widget.delete('1.0', tk.END)
             text_widget.insert(tk.END, "-" * 60 + '\n' )
-            text_widget.insert(tk.END, "Ping Run Completed: \n")
-            text_widget.insert(tk.END, result + "\n")
+            text_widget.insert(tk.END, "Ping Scan Completed: \n")
+            text_widget.insert(tk.END, "Sucessful Pings: \n")
+            for x in good_ping:
+                text_widget.insert(tk.END, x + '\n')
+            
+            text_widget.insert(tk.END, "Failed Pings: \n")
+            for x in bad_ping:
+                text_widget.insert(tk.END, x + "\n")
             text_widget.insert(tk.END, "-" * 60 + '\n' )
             
 
