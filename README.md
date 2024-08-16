@@ -1,9 +1,5 @@
 # I.P_Pinger
-Custom Python Program for Mt.Mckinley Bank to assit in automating I.T Inventory and audits of all computers and printers connected on our network
-
-# Minimum Viable Product
-
-A program that opens a window that prompts user for a file input of a csv file with different I.P adresses, and pings through each one for a signal. Print out a list of results.
+Custom Python Program for Mt.Mckinley Bank to assit in automating I.T Inventory and audits of all computers and printers connected on our network.
 
 ### Dependinces
   - [Python](https://www.python.org/downloads/)
