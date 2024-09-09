@@ -1,6 +1,9 @@
 # I.P_Pinger
+
 Custom Python Program for Mt.Mckinley Bank to assit in automating I.T/I.S Inventory and audits of all computers and printers connected on our network.
 Open an GUI where users can upload a list of IP addresses listed in a column of a CSV file and go through and ping each one individually, marking sucessful and unsucessful pings. 
+
+Custom Python Program for Mt.Mckinley Bank to assit in automating I.T Inventory and audits of all computers and printers connected on our network.
 
 ### Dependinces & Libaries Used
   - [Python 3.11](https://www.python.org/downloads/)
