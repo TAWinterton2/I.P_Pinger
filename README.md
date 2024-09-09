@@ -1,8 +1,12 @@
 # I.P_Pinger
+
+Custom Python Program for Mt.Mckinley Bank to assit in automating I.T/I.S Inventory and audits of all computers and printers connected on our network.
+Open an GUI where users can upload a list of IP addresses listed in a column of a CSV file and go through and ping each one individually, marking sucessful and unsucessful pings. 
+
 Custom Python Program for Mt.Mckinley Bank to assit in automating I.T Inventory and audits of all computers and printers connected on our network.
 
 ### Dependinces & Libaries Used
-  - [Python](https://www.python.org/downloads/)
+  - [Python 3.11](https://www.python.org/downloads/)
   - [Pandas](https://pandas.pydata.org/)
   - [Pathlib](https://docs.python.org/3/library/pathlib.html)
   - [tkinter](https://docs.python.org/3/library/tkinter.html)
@@ -11,7 +15,12 @@ Custom Python Program for Mt.Mckinley Bank to assit in automating I.T Inventory 
 
 <details>
   <summary><h1>Project Installation on Personal Machine </h1></summary>
-    <b>TODO</b>
+    <h2> Windows Installation</h2>
+          <p> For Installing on a Windows machine, I reccomend using Anaconda Navigator to manage the virtual enviroment and dependinces for this project.
+          You can download the Anaconda Navigator GUI <a href="https://www.anaconda.com/download/success"> here. </a> </p>
+          <p> Once you downloaded the Anaconda navigator, run it and create a new enviroment, and install the libaries listed above. Afterwords, open up an IDE of your choice and clone the main branch repo and set up virtual envrioment.  </p>
+          <p> Finally, you can start the program by running the "main.py" file. </p>
+          <p> Feel free to use the test csv files in the "test" file folder to test out program, or supply with your own. </p>
 </details>
 
   
