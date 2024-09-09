@@ -17,6 +17,7 @@ Open an GUI where users can upload a list of IP addresses listed in a column of 
           You can download the Anaconda Navigator GUI <a href="https://www.anaconda.com/download/success"> here. </a> </p>
           <p> Once you downloaded the Anaconda navigator, run it and create a new enviroment, and install the libaries listed above. Afterwords, open up an IDE of your choice and clone the main branch repo and set up virtual envrioment.  </p>
           <p> Finally, you can start the program by running the "main.py" file. </p>
+          <p> Feel free to use the test csv files in the "test" file folder to test out program, or supply with your own. </p>
 </details>
 
   
